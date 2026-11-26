@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Learn with Yella</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Floating decor (pure animation) -->
+<div class="sky" aria-hidden="true"><i class="cloud c1">☁️</i><i class="cloud c2">☁️</i><i class="cloud c3">☁️</i></div>
+
+<!-- Top bar: icons only. Hidden on the welcome screen. -->
+<header id="bar" class="hidden">
+  <button id="btnHome" class="round" aria-label="Home">🏠</button>
+  <div id="stars" aria-label="Stars">⭐ <b id="starCount">0</b></div>
+  <button id="btnLang" class="round" aria-label="Language">🇬🇧🇵🇭</button>
+  <button id="btnMute" class="round" aria-label="Music on/off">🎵</button>
+</header>
+
+<!-- 1. WELCOME: language + codename/avatar picker -->
+<main id="welcome" class="screen active">
+  <div class="yella">🐥</div>
+  <div class="langs">
+    <button class="lang" data-lang="en" aria-label="English">🇬🇧</button>
+    <button class="lang on" data-lang="bi" aria-label="Bilingual">🇬🇧🇵🇭</button>
+    <button class="lang" data-lang="fil" aria-label="Filipino">🇵🇭</button>
+  </div>
+  <div id="avatars" class="grid avatars"></div>
+</main>
+
+<!-- 2. ADVENTURE MAP -->
+<main id="map" class="screen">
+  <div class="yella small">🐥</div>
+  <svg class="trail" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M200 580 C 40 480, 360 400, 200 300 S 60 120, 200 60" />
+  </svg>
+  <button id="goSounds" class="dest d1" aria-label="Island of Sounds"><span>🏝️</span><em>🔤</em></button>
+  <button id="goNumbers" class="dest d2" aria-label="Number Jungle"><span>🌴</span><em>🔢</em></button>
+</main>
+
+<!-- 3. ISLAND OF SOUNDS -->
+<main id="sounds" class="screen"><div id="soundBoard" class="grid cards"></div></main>
+
+<!-- 4. NUMBER JUNGLE -->
+<main id="numbers" class="screen">
+  <div id="numBadge" class="numBadge">?</div>
+  <div id="numBoard" class="fruits"></div>
+</main>
+
+<div id="fx" aria-hidden="true"></div>
+<script src="app.js"></script>
+</body>
+</html>
